@@ -1,0 +1,49 @@
+body {
+    background-color: #FFF7F2;
+    color: #2E2E2E;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.hint {
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+    background-color: #F4A7B9;
+    color: #2E2E2E;
+    text-decoration: none;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
