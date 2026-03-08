@@ -1,6 +1,8 @@
 body {
-    background-color: #FFF7F2;
-    color: #2E2E2E;
+    /* A rich, warm cream that feels like parchment, not peach */
+    background-color: #FFFEF2; 
+    /* Deep Olive-Brown provides much better harmony with yellow than pure grey */
+    color: #4A412A; 
     font-family: 'Playfair Display', serif;
     margin: 0;
 }
@@ -13,37 +15,51 @@ body {
     align-items: center;
     text-align: center;
     padding: 2rem;
+    /* Subtle radial glow to make the center pop */
+    background: radial-gradient(circle, #FFFEF2 0%, #FFF9D6 100%);
 }
 
 h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
+    /* Using a bold Ochre for the primary heading */
+    color: #8B6508; 
 }
 
 .subtitle {
     font-size: 1.4rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
+    color: #634E00;
 }
 
 .hint {
     font-size: 1rem;
-    opacity: 0.7;
+    /* Lower opacity but still within the warm spectrum */
+    color: #7D6608;
+    opacity: 0.6;
     margin-bottom: 2.5rem;
 }
 
 .btn {
-    background-color: #F4A7B9;
-    color: #2E2E2E;
+    /* Bold Mustard Yellow - This is your primary action color */
+    background-color: #FFD32A; 
+    color: #4A412A;
     text-decoration: none;
     padding: 0.9rem 2.2rem;
     border-radius: 30px;
     font-size: 1.2rem;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 600;
+    /* Warm shadow instead of a cold black one */
+    box-shadow: 0 6px 25px rgba(184, 134, 11, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #EAB543;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    /* Instead of just moving, let's make it "glow" */
+    background-color: #FFC312;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(184, 134, 11, 0.4);
+    color: #2E2E2E;
 }
