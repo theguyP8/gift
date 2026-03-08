@@ -4,8 +4,9 @@
 
 body {
     margin: 0;
-    background-color: #FFF7F2;
-    color: #2E2E2E;
+    /* Soft cream background - much warmer than what you had */
+    background-color: #FFFDF0; 
+    color: #3D3321; /* Deep charcoal with a hint of brown to match the yellow */
     font-family: 'Inter', sans-serif;
 }
 
@@ -18,12 +19,15 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* Subtle gradient to give the hero some depth */
+    background: radial-gradient(circle, #FFFDF0 0%, #FFF9D6 100%);
 }
 
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #7D6608; /* Aged Gold */
 }
 
 .hero p {
@@ -41,17 +45,21 @@ main {
 }
 
 .card {
-    background-color: #F4A7B9;
+    /* Bold Amber/Mustard yellow instead of that pink */
+    background-color: #FFD95A; 
     padding: 2rem;
     border-radius: 28px;
     margin-bottom: 3rem;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    /* Softened the shadow so it doesn't look like a floating brick */
+    box-shadow: 0 15px 40px rgba(125, 102, 8, 0.15);
+    border: 1px solid rgba(125, 102, 8, 0.1);
 }
 
 .card h2 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
+    color: #4D4117;
 }
 
 /* LIST */
@@ -64,6 +72,8 @@ main {
 .card ul li {
     margin-bottom: 0.9rem;
     line-height: 1.6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 0.5rem;
 }
 
 /* MEMORIES */
@@ -77,12 +87,13 @@ main {
 .memories img {
     width: 100%;
     border-radius: 18px;
-    filter: grayscale(100%);
+    /* Sepia works better with yellow than pure grayscale */
+    filter: sepia(100%) brightness(90%);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .memories img:hover {
-    filter: grayscale(0%);
+    filter: sepia(0%) brightness(100%);
     transform: scale(1.03);
 }
 
@@ -91,6 +102,7 @@ main {
     font-size: 0.95rem;
     opacity: 0.8;
     text-align: center;
+    color: #7D6608;
 }
 
 /* LETTER */
@@ -105,4 +117,49 @@ footer {
     padding: 2.5rem 1.5rem;
     font-size: 1rem;
     opacity: 0.85;
+    color: #7D6608;
+}
+/* LINKS & BUTTONS */
+a {
+    color: #7D6608; /* The Aged Gold from your headers */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.1rem 0.2rem;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+/* The "Pattern" Approach: A subtle underline that expands */
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3D3321;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    color: #3D3321;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Specifically for links inside the yellow .card */
+.card a {
+    color: #4D4117;
+    background-color: rgba(255, 255, 255, 0.3); /* Slight highlight */
+    border-radius: 4px;
+}
+
+.card a:hover {
+    background-color: #3D3321;
+    color: #FFD95A; /* Invert the colors on hover */
 }
